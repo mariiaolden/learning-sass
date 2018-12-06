@@ -1,0 +1,68 @@
+@import 'style';
+$paddingbasis : 10*2px;
+
+
+@mixin gridbasis {
+  display: grid;
+  grid-template-areas: auto auto auto auto;
+  grid-gap:10px;
+  padding:10px;
+}
+
+@mixin opmak {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@mixin textopmak {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: $paddingbasis;
+}
+.news {
+@include gridbasis;
+div {
+  text-align: center;
+}
+img {
+  grid-area: 1 / 1 / 4 / 1 ;
+
+}
+.groteposter{
+  width: 100%;
+  height: auto;
+  padding-bottom: $paddingbasis;
+}
+
+.news1 {
+  @include opmak;
+  padding-bottom: $paddingbasis;
+   & img {
+     float:left;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  p{
+    overflow: hidden;
+
+  }
+  .textex{
+@include textopmak;
+  }
+
+}
+.news2 {
+  @include opmak;
+   & img {
+     float:left;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  p{
+   overflow: hidden;
+  }
+  .textex2{
+@extend .textex;
+  }
+
+}
+}

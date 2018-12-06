@@ -1,0 +1,72 @@
+$hovercolor: #d30000;
+$paddings: 25px;
+
+.logo {
+  width: 25vw;
+}
+body {
+  background: linear-gradient(to right, #000 30%, #FFF);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  li {
+    padding: 10px;
+    display: inline-block;
+  }
+  a {
+    color:initial;
+    text-decoration: none;
+    &:hover {
+      color: $hovercolor;
+    }
+  }
+}
+.picture {
+  width: 100%;
+}
+.poster {
+  border: 2px $hovercolor solid;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movieroster {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 80%;
+  .text {
+    grid-area: 1 / 5 / 2 / 13;
+    padding: $paddings;
+  }
+  .text2 {
+    grid-area: 2 / 9 / 3 / 13;
+    padding: $paddings;
+  }
+  .text3 {
+    grid-area: 3 / 5 / 4 / 9;
+    padding: $paddings;
+  }
+  .movie1 {
+    grid-area: 1 / 1 / 2 / 5;
+    width: 100%;
+
+  }
+  .movie2 {
+    width: 100%;
+    grid-area: 2 / 5 / 2 / 9;
+  }
+  .movie3 {
+    width: 100%;
+    grid-area: 3 / 9 / 5 / 13;
+  }
+}
